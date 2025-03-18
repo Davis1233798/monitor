@@ -65,8 +65,8 @@ def main():
         # 運行結束後的輸出（通過 Telegram 發送）
         if difference > 2 or dif > 2:
             message = (
-                f"Respority:Davis1233798/monitor.py"
-                f"github acrtions"
+                f"Respority:Davis1233798/monitor.py\n"
+                f"github acrtions\n"
                 f"網站網址: {URL}\n"
                 f"網站網址: {URL2}\n"
                 f"{URL} 目前可註冊數量: {difference}\n"
@@ -75,8 +75,8 @@ def main():
             send_message(message)
         else:
             message = (
-                f"Respority:Davis1233798/monitor.py"
-                f"github acrtions"
+                f"Respority:Davis1233798/monitor.py\n"
+                f"github acrtions\n"
                 f"目前 {URL} 及 {URL2} 皆無法註冊"
             )
             send_message(message)
