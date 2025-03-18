@@ -52,7 +52,7 @@ def main():
         difference = ooooo - xxxxx
         dif = oo - xx
         
-        # 發送 Telegram 通知
+        # 發送警告通知（如果差異大於 2）
         if difference > 2:
             message = (
                 f"警告：ooooo - xxxxx = {difference} > 2\n當前值：{xxxxx} / {ooooo}"
@@ -62,19 +62,22 @@ def main():
             message = f"警告：oo - xx = {dif} > 2\n當前值：{xx} / {oo}"
             send_message(message)
         
-        # 運行結束後的輸出
+        # 運行結束後的輸出（通過 Telegram 發送）
         if difference > 2 or dif > 2:
-            print(f"網站網址: {URL}")
-            print(f"網站網址: {URL2}")
-            print(f"{URL} 目前可註冊數量: {ooooo - xxxxx}")
-            print(f"{URL2} 目前可註冊數量: {oo - xx}")
+            message = (
+                f"網站網址: {URL}\n"
+                f"網站網址: {URL2}\n"
+                f"{URL} 目前可註冊數量: {difference}\n"
+                f"{URL2} 目前可註冊數量: {dif}"
+            )
+            send_message(message)
         else:
-            print(f"目前 {URL} 及 {URL2} 皆無法註冊")
+            message = f"目前 {URL} 及 {URL2} 皆無法註冊"
+            send_message(message)
 
     except Exception as e:
         error_message = f"監測腳本出現錯誤：{str(e)}"
         send_message(error_message)
-        print(f"錯誤：{str(e)}")
 
 if __name__ == "__main__":
     main()
