@@ -44,6 +44,7 @@ def send_message(message):
 
 
 def main():
+    print(TOKEN,CHATID)
     try:
         # 獲取數字並計算差異
         xxxxx, ooooo = get_numbers(URL)
