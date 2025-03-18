@@ -73,13 +73,7 @@ def main():
                 f"{URL2} 目前可註冊數量: {dif}"
             )
             send_message(message)
-        else:
-            message = (
-                f"Respority:Davis1233798/monitor.py\n"
-                f"github acrtions\n"
-                f"目前 {URL} 及 {URL2} 皆無法註冊"
-            )
-            send_message(message)
+
 
     except Exception as e:
         error_message = f"監測腳本出現錯誤：{str(e)}"
