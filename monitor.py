@@ -8,7 +8,7 @@ import re
 # 從環境變量中獲取 Telegram Token 和 Chat ID
 
 TOKEN = os.getenv("TELEGRAM_TOKEN")
-CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
+CHATID = os.getenv("TELEGRAM_CHAT_ID")
 URL = "https://www.serv00.com/"
 URL2 = "https://www.ct8.pl/"
 
