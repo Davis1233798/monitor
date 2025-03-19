@@ -1,7 +1,7 @@
 name: Monitor Serv00 and CT8
 on:
-  schedule:
-    - cron: '*/5 * * * *'  # 每 5 分鐘運行一次
+  # schedule:
+  #   - cron: '*/5 * * * *'  # 每 5 分鐘運行一次
   workflow_dispatch:  # 允許手動觸發
 jobs:
   monitor:
